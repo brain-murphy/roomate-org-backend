@@ -1,0 +1,22 @@
+{
+  "name": "roomate-org-backend",
+  "version": "1.0.0",
+  "description": "backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brain-murphy/roomate-org-backend.git"
+  },
+  "author": "brian murphy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brain-murphy/roomate-org-backend/issues"
+  },
+  "homepage": "https://github.com/brain-murphy/roomate-org-backend",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
