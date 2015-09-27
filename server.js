@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var app = express();
 
 var roomates = [], tasks = [], charges = [], chores = [];
-var nextRoomateID,nextTaskID,nextChargeID, nextChoreID;
+var nextRoomateID = 0,nextTaskID  = 0,nextChargeID = 0, nextChoreID = 0;
 var getRoomateID = function () {
     return nextRoomateID++;
 }
