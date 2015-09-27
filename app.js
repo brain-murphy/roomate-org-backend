@@ -3,6 +3,19 @@ var bodyParser = require('body-parser');
 var app = express();
 
 var roomates = [], tasks = [], charges = [], chores = [];
+var nextRoomateID,nextTaskID,nextChargeID, nextChoreID;
+var getRoomateID = function () {
+    return nextRoomateID++;
+}
+var getTaskID = function () {
+    return nextTaskID++;
+}
+var getChargeID = function () {
+    return nextChargeID++;
+}
+var getChoreID = function () {
+    return nextChoreID++;
+}
 
 app.get('/', function (req, res) {
 });
@@ -15,9 +28,11 @@ app.get('/roomates', function (req, res) {
 });
 
 app.post('/roomates', function (req, res) {
+    var roomate = req.body;
+    roomate.ID = getRoomateID();
     roomates.push(req.body);
     console.log(req.body);
-    res.send("added");
+    res.send(roomate);
 });
 
 app.delete('/roomates', function (req, res) {
