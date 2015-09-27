@@ -18,6 +18,7 @@ var getChoreID = function () {
 }
 
 app.get('/', function (req, res) {
+    res.send("use other urls");
 });
 
 app.use(bodyParser.json());
