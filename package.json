@@ -12,7 +12,7 @@
     "url": "https://github.com/brain-murphy/roomate-org-backend.git"
   },
   "author": "brian murphy",
-  "license": "ISC",
+  "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/brain-murphy/roomate-org-backend/issues"
   },
@@ -20,5 +20,6 @@
   "dependencies": {
     "express": "^4.13.3",
     "body-parser": "~1.14.0"
-  }
+  },
+  "devDependencies": {}
 }
