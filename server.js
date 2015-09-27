@@ -32,7 +32,6 @@ app.post('/roomates', function (req, res) {
     var roomate = req.body;
     roomate.ID = getRoomateID();
     roomates.push(req.body);
-    console.log(req.body);
     res.send(roomate);
 });
 
@@ -66,8 +65,10 @@ app.get('/tasks', function(req, res) {
 });
 
 app.post('/tasks', function (req, res) {
-    tasks.push(req.body);
-    res.send("added");
+    var task = req.body;
+    task.ID = getTaskID();
+    tasks.push(task);
+    res.send(task);
 });
 
 app.delete('/tasks', function (req, res) {
@@ -89,8 +90,10 @@ app.get('/charges', function(req, res) {
 });
 
 app.post('/charges', function (req, res) {
+    var charge = req.body;
+    charge.ID = getChargeID();
     charges.push(req.body);
-    res.send("added");
+    res.send(charge);
 });
 
 app.delete('/charges', function (req, res) {
@@ -112,8 +115,10 @@ app.get('/chores', function(req, res) {
 });
 
 app.post('/chores', function(req, res) {
+    var chore = req.body;
+    chore.ID = getChoreID();
 	chores.push(req.body);
-	res.send("added");
+	res.send(chore);
 });
 
 app.delete('/chores', function (req, res) {
