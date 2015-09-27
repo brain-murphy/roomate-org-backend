@@ -1,10 +1,13 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 
 var roomates = [], tasks = [], charges = [];
 
 app.get('/', function (req, res) {
 });
+
+app.use(bodyParser.json());
 
 //roomates
 app.get('/roomates', function (req, res) {
@@ -35,6 +38,10 @@ app.get('/charges', function(req, res) {
 app.post('/charges', function (req, res) {
     charges.push(req.body);
     res.send("added");
+});
+
+app.use("/", function (req, res) {
+  res.send("invalid path");
 });
 
 
