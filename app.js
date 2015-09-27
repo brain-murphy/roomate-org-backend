@@ -21,21 +21,22 @@ app.post('/roomates', function (req, res) {
 });
 
 app.delete('/roomates', function (req, res) {
-	res.send(roomates[0]);
 	var index = 0;
 	var found = false;
+    console.log(req.body);
 	for (; index < roomates.length; index++)
 	{
+        console.log("loop ID" + roomates[index].ID + " " + req.body.ID);
 		if (roomates[index].ID === req.body.ID)
 		{
-			break;
 			found = true;
+            break;
 		}
 	}
 	if (found)
 	{
-		res.send ("removed entry");
 		roomates.splice(index, 1);
+		res.send ("removed entry");
 	}
 	else
 	{
